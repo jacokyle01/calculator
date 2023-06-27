@@ -31,3 +31,8 @@ function toggleButtons() {
     }
     return;
 }
+
+function evaluateExpression() {
+    let evaluated = output.innerHTML.slice(0, -1);
+    output.innerHTML = eval(evaluated);
+}
