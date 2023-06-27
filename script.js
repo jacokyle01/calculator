@@ -14,18 +14,18 @@ window.onload = function() {
 
 buttons.forEach(button => button.addEventListener("click", function (e) {
     const button = e.target;
-    lastPressedType = button.parentElement.id;
+    lastPressedType = button.className;
     const symbol = button.id;
     output.innerHTML = output.innerHTML + symbol;
     toggleButtons();
-    if (lastPressedType == "evaluate") {
+    if (lastPressedType == "evaluator") {
         evaluateExpression();
     }
 }))
 
 function toggleButtons() {
     buttons.forEach(button => button.disabled = false)
-    if (lastPressedType == "operations" || lastPressedType == null) {
+    if (lastPressedType == "operator" || lastPressedType == null) {
         operators.forEach(operator => operator.disabled = true)
         evaluator.disabled = true;
     }

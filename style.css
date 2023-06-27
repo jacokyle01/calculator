@@ -1,8 +1,61 @@
+* {
+    user-select: none;
+    font-family: "Roboto", sans-serif;
+}
+.calculator {
+    max-width: 500px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.output {
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    padding: 5px;
+}
+
+.main-buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    background-color: lightgray;
+}
+
 button {
     width: 100px;
     height: 120px;
+    border-radius: 25%;
+    font-size: 30px;
+    margin: 5px;
+    font-weight: bold;
+    color: white;
 }
+
+.numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.number {
+    background-color: #353535;
+}
+
+.operator {
+    background-color: #e49800;
+}
+
+.evaluator {
+    background-color: #1900a4
+}
+
 
 .disabled {
     background-color: red;
+}
+
+#numbers button:last-child {
+    width: 200px;
 }
